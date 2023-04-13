@@ -55,6 +55,14 @@
       height: 260px;
       margin-top: 40px;
 
+      .img-wrapper {
+        position: relative;
+
+        button {
+          position: absolute;
+        }
+      }
+
       p {
         font-size: 14px;
         line-height: 17px;

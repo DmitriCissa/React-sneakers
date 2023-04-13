@@ -1,0 +1,118 @@
+.overlay {
+  position: absolute;
+
+  display: flex;
+  display: none;
+
+
+  top: 0;
+  right: 0;
+  width: 385px;
+  height: 100%;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+  background: #ffffff;
+
+  .cart {
+    display: flex;
+    flex-direction: column;
+
+    margin: 30px;
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &-list {
+      flex: 1;
+      .item {
+        margin-top: 25px;
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          border-radius: 20px;
+          width: 325px;
+          height: 120px;
+          margin: 0 auto;
+
+          background: #ffffff;
+          border: 1px solid #f3f3f3;
+          img {
+            width: 70px;
+            height: 70px;
+          }
+
+          &-info {
+            width: 150px;
+            p {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+            }
+            span {
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+
+          button {
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    &-total-price {
+      button {
+        position: relative;
+
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        border-radius: 18px;
+        width: 325px;
+        height: 55px;
+
+        color: #ffffff;
+        background: #9dd558;
+
+        img {
+          position: absolute;
+          right: 22px;
+          top: 22px;
+        }
+      }
+      .price-list {
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          div {
+            margin: 0 10px;
+            position: relative;
+            top: -3px;
+            flex: 1;
+            height: 1px;
+            border-bottom: 1px dashed #dfdfdf;
+          }
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}

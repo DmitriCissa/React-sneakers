@@ -1,6 +1,69 @@
 function App() {
   return (
     <div className="wrapper">
+      <div className="overlay">
+        <div className="cart">
+          <h3>Корзина</h3>
+          <div className="cart-list">
+            <div className="item">
+              <div className="card">
+                <img src="/img/sneakers/sneakers_1.jpg" />
+                <div className="card-info">
+                  <p>Мужские Кроссовки Nike Air Max 270</p>
+                  <span>12 999 руб.</span>
+                </div>
+                <button>
+                  <img src="/img/remove.svg" alt="remove" />
+                </button>
+              </div>
+            </div>
+            <div className="item">
+              <div className="card">
+                <img src="/img/sneakers/sneakers_2.jpg" />
+                <div className="card-info">
+                  <p>Мужские Кроссовки Nike Air Max 270</p>
+                  <span>12 999 руб.</span>
+                </div>
+                <button>
+                  <img src="/img/remove.svg" alt="remove" />
+                </button>
+              </div>
+            </div>
+            <div className="item">
+              <div className="card">
+                <img src="/img/sneakers/sneakers_3.jpg" />
+                <div className="card-info">
+                  <p>Мужские Кроссовки Nike Air Max 270</p>
+                  <span>12 999 руб.</span>
+                </div>
+                <button>
+                  <img src="/img/remove.svg" alt="remove" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="cart-total-price">
+            <div>
+              <ul className="price-list">
+                <li className="price-list__item">
+                  <p>Итого:</p>
+                  <div></div>
+                  <b>21 324 руб.</b>
+                </li>
+                <li className="price-list__item">
+                  <p>Налог 5%</p>
+                  <div></div>
+                  <b>1024 руб.</b>
+                </li>
+              </ul>
+              <button>
+                Оформить заказ <img src="/img/arrow.svg" alt="arrow" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="header">
         <header>
           <div className="header-left">
@@ -51,22 +114,34 @@ function App() {
             ></input>
           </div>
         </div>
+
         <div className="content-body">
           <div className="content-body__card">
-            <img src="/img/sneakers/sneakers_1.jpg" alt="sneakers" />
+            <div className="img-wrapper">
+              <button>
+                <img src="/img/heart-item.svg" alt="plus" />
+              </button>
+              <img src="/img/sneakers/sneakers_1.jpg" alt="sneakers" />
+            </div>
             <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
             <div className="content-body__price">
               <div>
                 <p>цена:</p>
-                <span>12 999 руб.</span>
+                <span>11 999 руб.</span>
               </div>
               <button>
-                <img src="/img/plus.svg" alt="plus"></img>
+                <img src="/img/plus.svg" alt="plus" />
               </button>
             </div>
           </div>
+
           <div className="content-body__card">
-            <img src="/img/sneakers/sneakers_1.jpg" alt="sneakers" />
+            <div className="img-wrapper">
+              <button>
+                <img src="/img/heart-item.svg" alt="plus" />
+              </button>
+              <img src="/img/sneakers/sneakers_2.jpg" alt="sneakers" />
+            </div>
             <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
             <div className="content-body__price">
               <div>
@@ -74,33 +149,45 @@ function App() {
                 <span>12 999 руб.</span>
               </div>
               <button>
-                <img src="/img/plus.svg" alt="plus"></img>
+                <img src="/img/plus.svg" alt="plus" />
               </button>
             </div>
           </div>
+
           <div className="content-body__card">
-            <img src="/img/sneakers/sneakers_1.jpg" alt="sneakers" />
+            <div className="img-wrapper">
+              <button>
+                <img src="/img/heart-item.svg" alt="plus" />
+              </button>
+              <img src="/img/sneakers/sneakers_3.jpg" alt="sneakers" />
+            </div>
             <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
             <div className="content-body__price">
               <div>
                 <p>цена:</p>
-                <span>12 999 руб.</span>
+                <span>14 999 руб.</span>
               </div>
               <button>
-                <img src="/img/plus.svg" alt="plus"></img>
+                <img src="/img/tick.svg" alt="plus" />
               </button>
             </div>
           </div>
+
           <div className="content-body__card">
-            <img src="/img/sneakers/sneakers_1.jpg" alt="sneakers" />
+            <div className="img-wrapper">
+              <button>
+                <img src="/img/pink-heart.svg" alt="plus" />
+              </button>
+              <img src="/img/sneakers/sneakers_4.jpg" alt="sneakers" />
+            </div>
             <p>Мужские Кроссовки Nike Blazer Mid Suede</p>
             <div className="content-body__price">
               <div>
                 <p>цена:</p>
-                <span>12 999 руб.</span>
+                <span>2 999 руб.</span>
               </div>
               <button>
-                <img src="/img/plus.svg" alt="plus"></img>
+                <img src="/img/plus.svg" alt="plus" />
               </button>
             </div>
           </div>
