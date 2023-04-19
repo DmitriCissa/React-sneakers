@@ -1,12 +1,17 @@
-import React from "react";
+import { React } from "react";
 
-const Cart = () => {
+const Cart = ({ showCart, onCloseCart }) => {
   return (
     <div className="overlay">
       <div className="cart">
         <div className="cart-close">
           <h3>Корзина</h3>
-          <button>
+          <button
+            onClick={() => {
+              onCloseCart(!showCart);
+              document.body.style.overflow = "auto";
+            }}
+          >
             <img src="/img/remove.svg" alt="close" />
           </button>
         </div>

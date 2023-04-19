@@ -1,23 +1,21 @@
 import React, { useState } from "react";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const showCartHandler = () => {
     setShowCart(!showCart);
+    document.body.style.overflow = "hidden";
   };
-
-  console.log(showCart);
-
   return (
     <section className="header">
-      {showCart ? <Cart></Cart> : ""}
-
+      {showCart ? <Cart showCart onCloseCart={setShowCart} /> : ""}
       <header>
         <div className="header-left">
-          <a href="#">
+          <Link to="/">
             <img src="/img/logo.svg" alt="logo" />
-          </a>
+          </Link>
           <div className="header-left__info">
             <h3 className="header-left__title">React sneakers</h3>
             <p className="header-left__description">Магазин лучших кроссовок</p>
@@ -32,14 +30,14 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <a href="#">
+              <Link to="/wishlist">
                 <img src="/img/heart.svg" alt="wishlist" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">
+              <Link to="/purchases">
                 <img src="/img/profile.svg" alt="profile" />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

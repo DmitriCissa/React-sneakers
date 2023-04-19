@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content = () => {
+const Search = () => {
   return (
     <div className="content-header">
       <h2 className="content-header__title">Все кроссовки</h2>
@@ -12,4 +12,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Search;
