@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import Cart from "./Cart";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { cartSelector } from "../redux/slices/cartSlice";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const showCartHandler = () => {
     setShowCart(!showCart);
-    document.body.style.overflow = "hidden";
   };
+
+  const { items, totalPrice } = useSelector(cartSelector);
+  console.log(items);
   return (
     <section className="header">
       {showCart ? <Cart showCart onCloseCart={setShowCart} /> : ""}
+
       <header>
         <div className="header-left">
           <Link to="/">
@@ -26,7 +31,7 @@ const Header = () => {
             <li>
               <button onClick={showCartHandler}>
                 <img src="/img/cart.svg" alt="cart" />
-                <span>1205 руб.</span>
+                <span>{totalPrice} руб.</span>
               </button>
             </li>
             <li>

@@ -1,14 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const Card = ({ price, name, image }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { addItem, cartSelector } from "../redux/slices/cartSlice";
+
+const Card = ({ id, price, name, image }) => {
+  const dispatch = useDispatch();
+
+  const onClickAddItem = () => {
+    const item = {
+      id,
+      name,
+      price,
+      image,
+    };
+    dispatch(addItem(item));
+  };
+
   const [addToCart, setAddToCart] = useState(false);
+
   const addItemHandler = () => {
-    setAddToCart(!addToCart);
+    setAddToCart(true);
+    onClickAddItem();
   };
 
   const [addToLiked, setAddToLiked] = useState(false);
   const addToLikedHandler = () => {
-    setAddToLiked(!addToLiked);
+    setAddToLiked(true);
   };
 
   return (
@@ -27,7 +44,7 @@ const Card = ({ price, name, image }) => {
       <div className="content-body__price">
         <div>
           <p>цена:</p>
-          <span>{price}</span>
+          <span>{price} руб.</span>
         </div>
         <button onClick={addItemHandler}>
           {!addToCart ? (
